@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Set the directory path
-directory="/home/poncho/toto/repos/Wallpapers"
+directory="/run/media/poncho/NEW VOLUME/"
 
 # Change to the directory
 cd "$directory"
 
 # Counter for renaming
-counter=1
+counter=144
 
 # Loop through each file in the directory
 for file in *; do
