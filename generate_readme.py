@@ -25,6 +25,9 @@ def generate_readme(directory, images):
         readme.write('# Galería de Imágenes\n\n')
         readme.write('Este repositorio contiene una colección de imágenes renombradas automáticamente.\n\n')
         for image in images:
+            # Obtener el número de imagen (sin la extensión)
+            image_number = os.path.splitext(image)[0]
+            readme.write(f'## Imagen {image_number}\n')  # Añadir el número de imagen como encabezado
             readme.write(f'![{image}](./{image})\n\n')
 
 if __name__ == '__main__':
