@@ -1,20 +1,40 @@
 import os
+import re
 
-# Define the path where your images are stored
-path = '.'  # Change this to your image directory if needed
+def rename_images(directory):
+    image_extensions = ('.png', '.jpg', '.jpeg', '.gif')
+    renamed_files = []
 
-# Get all image files
-image_files = [f for f in os.listdir(path) if f.endswith(('.jpg', '.jpeg', '.png'))]
+    # Contador para la numeración de imágenes
+    count = 1
 
-# Create the README.md content
-readme_content = "# Wallpapers\nEverything Wallpapers personal\n"
+    for filename in os.listdir(directory):
+        if filename.lower().endswith(image_extensions):
+            # Crear nuevo nombre para la imagen
+            new_name = f'{count}{os.path.splitext(filename)[1]}'
+            old_path = os.path.join(directory, filename)
+            new_path = os.path.join(directory, new_name)
+            os.rename(old_path, new_path)
+            renamed_files.append(new_name)
+            count += 1
 
-for i, image in enumerate(image_files, start=1):
-    readme_content += f"{i}. ![Descripción de la imagen {i}]({image})\n"
+    return renamed_files
 
-# Write to README.md
-with open('README.md', 'w') as readme_file:
-    readme_file.write(readme_content)
+def generate_readme(directory, images):
+    with open(os.path.join(directory, 'README.md'), 'w') as readme:
+        readme.write('# Galería de Imágenes\n\n')
+        readme.write('Este repositorio contiene una colección de imágenes renombradas automáticamente.\n\n')
+        for image in images:
+            readme.write(f'![{image}](./{image})\n\n')
 
-print("README.md generated successfully!")
+if __name__ == '__main__':
+    # Establece la ruta del directorio de imágenes
+    directory = os.path.dirname(os.path.abspath(__file__))  # Obtiene el directorio actual del script
+    renamed_files = rename_images(directory)
 
+    if renamed_files:
+        generate_readme(directory, renamed_files)
+        print(f'Imágenes renombradas: {renamed_files}')
+        print('README.md generado correctamente.')
+    else:
+        print('No se encontraron imágenes en el directorio especificado.')
