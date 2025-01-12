@@ -140,5 +140,6 @@ Lista de fondos de pantalla:
 137. ![Descripción de la imagen 137](137.jpg)
 138. ![Descripción de la imagen 138](138.jpg)
 139. ![Descripción de la imagen 139](139.jpg)
-140. ![Descripción de la imagen 140](Sinlogo.jpg)
-141. ![Descripción de la imagen 141](ConLogo.jpg)
+140. ![Descripción de la imagen 140](inf.jpg)
+141. ![Descripción de la imagen 141](Sinlogo.jpg)
+142. ![Descripción de la imagen 142](ConLogo.jpg)
