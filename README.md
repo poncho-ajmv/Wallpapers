@@ -1,5 +1,6 @@
 # Wallpapers
-Everything Wallpapers personal
+Lista de fondos de pantalla:
+
 1. ![Descripción de la imagen 1](1.jpg)
 2. ![Descripción de la imagen 2](2.jpg)
 3. ![Descripción de la imagen 3](3.jpg)
@@ -64,10 +65,10 @@ Everything Wallpapers personal
 62. ![Descripción de la imagen 62](62.png)
 63. ![Descripción de la imagen 63](63.png)
 64. ![Descripción de la imagen 64](64.jpg)
-65. ![Descripción de la imagen 65](65.png)
+65. ![Descripción de la imagen 65](65.jpg)
 66. ![Descripción de la imagen 66](66.jpg)
-67. ![Descripción de la imagen 67](67.jpeg)
-68. ![Descripción de la imagen 68](68.jpeg)
+67. ![Descripción de la imagen 67](67.png)
+68. ![Descripción de la imagen 68](68.png)
 69. ![Descripción de la imagen 69](69.jpg)
 70. ![Descripción de la imagen 70](70.jpg)
 71. ![Descripción de la imagen 71](71.jpg)
@@ -90,8 +91,8 @@ Everything Wallpapers personal
 88. ![Descripción de la imagen 88](88.jpg)
 89. ![Descripción de la imagen 89](89.jpg)
 90. ![Descripción de la imagen 90](90.jpg)
-91. ![Descripción de la imagen 91](91.png)
-92. ![Descripción de la imagen 92](92.jpg)
+91. ![Descripción de la imagen 91](91.jpg)
+92. ![Descripción de la imagen 92](92.png)
 93. ![Descripción de la imagen 93](93.jpg)
 94. ![Descripción de la imagen 94](94.jpg)
 95. ![Descripción de la imagen 95](95.jpg)
@@ -139,3 +140,5 @@ Everything Wallpapers personal
 137. ![Descripción de la imagen 137](137.jpg)
 138. ![Descripción de la imagen 138](138.jpg)
 139. ![Descripción de la imagen 139](139.jpg)
+140. ![Descripción de la imagen 140](Sinlogo.jpg)
+141. ![Descripción de la imagen 141](ConLogo.jpg)
