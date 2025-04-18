@@ -27,4 +27,4 @@ python3 -c "from PIL import Image, ImageTk" 2>/dev/null || {
 
 # Ejecutar la aplicación
 echo "[INFO] Ejecutando visor de imágenes..."
-python3 main.py
+python3 linux.py

@@ -5,8 +5,9 @@ import platform
 from tkinter import Tk, Canvas, Label, Button, StringVar, Listbox, Scrollbar, Frame, Toplevel, OptionMenu, filedialog
 from PIL import Image, ImageTk
 
-# Ruta de carpeta donde se guardarán y leerán las imágenes
-IMAGES_FOLDER = os.path.join(os.path.dirname(__file__), "imagenes")
+# === CONFIGURACIÓN DE RUTA PARA CARGAR IMÁGENES DESDE /imagenes EN NIVEL SUPERIOR ===
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+IMAGES_FOLDER = os.path.join(BASE_DIR, "imagenes")
 os.makedirs(IMAGES_FOLDER, exist_ok=True)
 
 def show_credits(root):
@@ -219,7 +220,7 @@ def display_images():
         show_image(0)
 
     def generate_readme():
-        with open("README.md", "w", encoding="utf-8") as readme:
+        with open(os.path.join(BASE_DIR, "README.md"), "w", encoding="utf-8") as readme:
             readme.write("# Wallpapers\nLista de fondos de pantalla:\n\n")
             for i, image in enumerate(images, start=1):
                 readme.write(f"{i}. ![Descripción de la imagen {i}](imagenes/{image})\n")
