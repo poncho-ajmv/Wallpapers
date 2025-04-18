@@ -1,3 +1,5 @@
+#Windows version
+
 import os
 import random
 import re
@@ -71,6 +73,11 @@ def display_images():
             canvas_width = canvas.winfo_width()
             canvas_height = canvas.winfo_height()
 
+            # Default fallback if sizes are not ready
+            if canvas_width <= 1 or canvas_height <= 1:
+                canvas_width = 800
+                canvas_height = 600
+
             if img_size.get() == "Grande":
                 img_ratio = original_width / original_height
                 canvas_ratio = canvas_width / canvas_height
@@ -93,6 +100,10 @@ def display_images():
             else:
                 new_width, new_height = original_width, original_height
 
+            # Validación para evitar resize con valores inválidos
+            new_width = max(1, new_width)
+            new_height = max(1, new_height)
+
             img = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
             img_tk = ImageTk.PhotoImage(img)
             canvas.delete("all")
@@ -101,6 +112,7 @@ def display_images():
             label.config(text=f"{images[index]} ({index + 1}/{len(images)})")
             listbox.selection_clear(0, "end")
             listbox.selection_set(index)
+
 
     def on_listbox_select(event):
         selected = listbox.curselection()
